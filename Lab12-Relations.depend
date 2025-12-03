@@ -1,0 +1,46 @@
+# depslib dependency file v1.0
+1764768925 source:/home/mostafa/Desktop/C++/Lab12-Relations/shape.cpp
+
+1764793240 source:/home/mostafa/Desktop/C++/Lab12-Relations/circle.cpp
+	"circle.h"
+
+1764793240 /home/mostafa/Desktop/C++/Lab12-Relations/circle.h
+	"shape.h"
+	"point.h"
+
+1764792874 /home/mostafa/Desktop/C++/Lab12-Relations/shape.h
+
+1764792875 /home/mostafa/Desktop/C++/Lab12-Relations/point.h
+
+1764793240 source:/home/mostafa/Desktop/C++/Lab12-Relations/picture.cpp
+	"picture.h"
+	<iostream>
+
+1764793240 /home/mostafa/Desktop/C++/Lab12-Relations/picture.h
+	"shape.h"
+
+1764792876 source:/home/mostafa/Desktop/C++/Lab12-Relations/point.cpp
+	"point.h"
+
+1764793519 source:/home/mostafa/Desktop/C++/Lab12-Relations/line.cpp
+	"line.h"
+	<cmath>
+
+1764793250 /home/mostafa/Desktop/C++/Lab12-Relations/line.h
+	"shape.h"
+	"point.h"
+
+1764793239 source:/home/mostafa/Desktop/C++/Lab12-Relations/main.cpp
+	"picture.h"
+	"circle.h"
+	"Rect.h"
+	"line.h"
+	<iostream>
+
+1764793270 /home/mostafa/Desktop/C++/Lab12-Relations/Rect.h
+	"shape.h"
+	"point.h"
+
+1764793240 source:/home/mostafa/Desktop/C++/Lab12-Relations/Rect.cpp
+	"Rect.h"
+
