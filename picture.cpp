@@ -7,7 +7,6 @@ picture::picture() : shapes(nullptr), shapeCount(0) {
 }
 
 picture::~picture() {
-    delete[] shapes;
 }
 
 void picture::addShapes(int n, shape** arr) {

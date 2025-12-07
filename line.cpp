@@ -11,21 +11,32 @@ void line::draw(char canvas[30][80]) {
     int x1 = start.getX(), y1 = start.getY();
     int x2 = end.getX(), y2 = end.getY();
 
-    int dx = x2 - x1;
-    int dy = y2 - y1;
-    int steps = std::max(abs(dx), abs(dy));
+    int dx = abs(x2 - x1);
+    int dy = abs(y2 - y1);
 
-    float xInc = dx / (float)steps;
-    float yInc = dy / (float)steps;
+    int sx = (x1 < x2) ? 1 : -1;
+    int sy = (y1 < y2) ? 1 : -1;
 
-    float x = x1, y = y1;
+    int err = dx - dy;
+    int x = x1, y = y1;
 
-    for(int i = 0; i <= steps; i++) {
-        int px = (int)x, py = (int)y;
-        if(px >= 0 && px < 80 && py >= 0 && py < 30)
-            canvas[py][px] = '*';
+    while(true) {
+        if(x >= 0 && x < 80 && y >= 0 && y < 30)
+            canvas[y][x] = '*';
 
-        x += xInc;
-        y += yInc;
+        if(x == x2 && y == y2)
+            break;
+
+        int e2 = 2 * err;
+
+        if(e2 > -dy) {
+            err -= dy;
+            x += sx;
+        }
+
+        if(e2 < dx) {
+            err += dx;
+            y += sy;
+        }
     }
 }
